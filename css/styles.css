@@ -1,0 +1,135 @@
+/******Reset*****/
+
+html {
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* Reseteo el modelo de caja */
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #4a6fa5;
+}
+
+/* Reseteo el margen y especifico los tamaños de los encabezados y otros elementos */
+/* Los ordeno alfabeticamente */
+a {
+    color: 000;
+    text-decoration: none;
+    transition: all 0.75 ease-out;
+
+}
+
+a:hover {
+    opacity: 0.75;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1rem;
+    padding: 0.25rem 0;
+}
+
+h5 {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+h6 {
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+img {
+    /* Con esto hago responsive la img */
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    line-height: 1.6;
+}
+.header {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    padding: auto auto;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--second-color);
+}
+
+.header>.container {
+    /* Le doy la forma al menu para versión mobile */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: auto;
+}
+.section {
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+
+}
+
+.container {
+margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+}
+.menu {
+    position: fixed;
+    left: 0;
+    bottom: 4rem;
+    width: 100%;
+    /* doy display flex para mostrar los elementos del menú */
+    display: flex;
+    flex-direction: column;
+    /* menu desactivado */
+    opacity: 0;
+    /* Como tengo opacidad 0 tengo que darle que el curso no haga nada al pasar por elementos */
+    pointer-events: none;
+    background-color: var(--second-color);
+    transition: opacity 0.5s ease;
+}
+.menu a {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--first-color);
+}
+
+.menu a:hover {
+    color: red;
+    background-color: blue;
+}
